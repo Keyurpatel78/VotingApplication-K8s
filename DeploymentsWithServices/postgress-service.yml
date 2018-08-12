@@ -3,8 +3,8 @@ kind: Service
 metadata:
   name: db
   labels:
-	name: db-service
-	app: voting-app
+    name: db-service
+    app: voting-app
 spec:
   ports:
   - port: 5432

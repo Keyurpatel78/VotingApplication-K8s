@@ -3,13 +3,13 @@ kind: Service
 metadata:
   name: voting-service
   labels:
-	name: voting-service
-	app: voting-app
+    name: voting-service
+    app: voting-app
 spec:
   type: LoadBalancer
   ports:
   - port: 80
     targetPort: 80
   selctor:
-    name: webapp-1
+    name: webapp-1-pod
     app: voting-app

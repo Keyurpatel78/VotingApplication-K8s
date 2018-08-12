@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-replica-set
+  labels: 
+    app: myapp 
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: tutum-helloworld
+          image: nginx:1.12
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: myapp
